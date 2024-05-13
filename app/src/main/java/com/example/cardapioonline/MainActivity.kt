@@ -24,25 +24,6 @@ class MainActivity : AppCompatActivity() {
         foodAdapter = FoodAdapter(this,foodList)
         recyclerViewFood.adapter = foodAdapter
 
-        binding.btnAddCart.setOnClickListener {
-            var valor1:Float
-            var valor2:Float
-            var valorFinal:Float
-            if (binding.textViewValor.text == null){
-                binding.textViewValor.text = binding.txtPrice.text
-            }else{
-                valor1 = binding.textViewValor.text.toString().toFloat()
-                valor2 = binding.txtPrice.text.toString().toFloat()
-                valorFinal = valor1 + valor2
-
-                binding.textViewValor.text = valorFinal.toString()
-            }
-        }
-
-        binding.btnVerificar.setOnClickListener {
-            val intentForm = Intent(this,FinalizarActivity::class.java)
-            startActivity(intentForm)
-        }
 
         getFood()
         }
@@ -61,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             val food2 = Food(
                 imgFood = R.drawable.food2,
                 foodName = "food 2",
-                foodDescription = "descricao aleatoria",
+                foodDescription = "koqdsa",
                 price = "60.00"
 
             )
@@ -70,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             val food3 = Food(
                 imgFood = R.drawable.food3,
                 foodName = "food 3",
-                foodDescription = "descricao aleatoria",
+                foodDescription = "PF",
                 price = "70.00"
 
             )
@@ -79,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             val food4 = Food(
                 imgFood = R.drawable.food4,
                 foodName = "food 4",
-                foodDescription = "descricao aleatoria",
+                foodDescription = "sei la",
                 price = "80.00"
 
             )
